@@ -3,7 +3,7 @@ const Footer = () => {
         <div>
             <section className="relative main-box footer-con">
                 <img
-                    alt="vector"
+                    alt="background vector"
                     className="vector8 img-fluid absolute"
                     src="/vector8.png"
                 />
@@ -15,7 +15,7 @@ const Footer = () => {
                                     <img
                                         className="img-fluid"
                                         src="/partner-logo-1.png"
-                                        alt="icon"
+                                        alt="partner logo 1"
                                     />
                                 </figure>
                             </li>
@@ -24,7 +24,7 @@ const Footer = () => {
                                     <img
                                         className="img-fluid"
                                         src="/partner-logo-2.png"
-                                        alt="icon"
+                                        alt="partner logo 2"
                                     />
                                 </figure>
                             </li>
@@ -33,7 +33,7 @@ const Footer = () => {
                                     <img
                                         className="img-fluid"
                                         src="/partner-logo-3.png"
-                                        alt="icon"
+                                        alt="partner logo 3"
                                     />
                                 </figure>
                             </li>
@@ -42,7 +42,7 @@ const Footer = () => {
                                     <img
                                         className="img-fluid"
                                         src="/partner-logo-4.png"
-                                        alt="icon"
+                                        alt="partner logo 4"
                                     />
                                 </figure>
                             </li>
@@ -51,7 +51,7 @@ const Footer = () => {
                                     <img
                                         className="img-fluid"
                                         src="/partner-logo-5.png"
-                                        alt="icon"
+                                        alt="partner logo 5"
                                     />
                                 </figure>
                             </li>
@@ -60,185 +60,111 @@ const Footer = () => {
                                     <img
                                         className="img-fluid"
                                         src="/partner-logo-6.png"
-                                        alt="icon"
+                                        alt="partner logo 6"
                                     />
                                 </figure>
                             </li>
                         </ul>
-                        {/* partner con */}
                     </div>
+
                     <div className="middle-portion">
                         <div className="row grid grid-cols-1 lg:grid-cols-5 gap-5">
                             <div className="lg:col-span-2">
-                                <a href="index.html">
+                                <a href="/">
                                     <figure className="flex justify-center lg:justify-start footer-logo">
                                         <img
                                             src="/footer-logo.png"
                                             className="img-fluid"
-                                            alt=""
+                                            alt="ExploreEasy logo"
                                         />
                                     </figure>
                                 </a>
                                 <p className="text-size-16 footer-text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do
-                                    eiusmod tempororem ipsum dolor sit am econsect ametconsectetetur
-                                    adipiscing.
+                                    Discover the world with ExploreEasy. Find the best travel
+                                    destinations, tips, and guides to make your journey
+                                    unforgettable.
                                 </p>
                                 <figure className="mb-0 flex justify-center lg:justify-start payment-icon">
                                     <img
                                         src="/payment-card.png"
                                         className="img-fluid"
-                                        alt=""
+                                        alt="Payment methods"
                                     />
                                 </figure>
                             </div>
-                            <div className="col-lg-2 col-md-6 col-sm-6 col-12">
+
+                            <div>
                                 <div className="links">
                                     <h4 className="font-semibold text-xl heading">Quick Links</h4>
                                     <hr className="line" />
                                     <ul className="list-unstyled mb-0">
                                         <li>
-                                            <a
-                                                href="index.html"
-                                                className="text-size-16 text text-decoration-none"
-                                            >
-                                                Home
-                                            </a>
+                                            <a href="/" className="text-size-16 text-decoration-none">Home</a>
                                         </li>
                                         <li>
-                                            <a
-                                                href="service.html"
-                                                className="text-size-16 text text-decoration-none"
-                                            >
-                                                Services
-                                            </a>
+                                            <a href="/services" className="text-size-16 text-decoration-none">Services</a>
                                         </li>
                                         <li>
-                                            <a
-                                                href="blog.html"
-                                                className="text-size-16 text text-decoration-none"
-                                            >
-                                                Latest News
-                                            </a>
+                                            <a href="/blog" className="text-size-16 text-decoration-none">Latest News</a>
                                         </li>
                                         <li>
-                                            <a
-                                                href="booking.html"
-                                                className="text-size-16 text text-decoration-none"
-                                            >
-                                                Booking
-                                            </a>
+                                            <a href="/booking" className="text-size-16 text-decoration-none">Booking</a>
                                         </li>
                                         <li>
-                                            <a
-                                                href="destinations.html"
-                                                className="text-size-16 text text-decoration-none mb-0"
-                                            >
-                                                Destinations
-                                            </a>
+                                            <a href="/destinations" className="text-size-16 text-decoration-none">Destinations</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div className="">
-                                <div className="links var1">
+
+                            <div>
+                                <div className="links">
                                     <h4 className="font-semibold text-xl heading">Support</h4>
                                     <hr className="line" />
                                     <ul className="list-unstyled mb-0">
                                         <li>
-                                            <a
-                                                href="about.html"
-                                                className="text-size-16 text text-decoration-none"
-                                            >
-                                                About Us
-                                            </a>
+                                            <a href="/about" className="text-size-16 text-decoration-none">About Us</a>
                                         </li>
                                         <li>
-                                            <a
-                                                href="contact.html"
-                                                className="text-size-16 text text-decoration-none"
-                                            >
-                                                Contact Us
-                                            </a>
+                                            <a href="/contact" className="text-size-16 text-decoration-none">Contact Us</a>
                                         </li>
                                         <li>
-                                            <a
-                                                href="team.html"
-                                                className="text-size-16 text text-decoration-none"
-                                            >
-                                                Team
-                                            </a>
+                                            <a href="/faq" className="text-size-16 text-decoration-none">FAQ</a>
                                         </li>
                                         <li>
-                                            <a
-                                                href="faq.html"
-                                                className="text-size-16 text text-decoration-none"
-                                            >
-                                                FAQ
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="testimonial.html"
-                                                className="text-size-16 text text-decoration-none mb-0"
-                                            >
-                                                Testimonial
-                                            </a>
+                                            <a href="/testimonials" className="text-size-16 text-decoration-none">Testimonials</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div className="col-lg-3 col-md-6 col-sm-6 col-12 d-sm-block">
+
+                            <div>
                                 <div className="icon">
                                     <h4 className="font-semibold text-xl heading">Get in Touch</h4>
                                     <hr className="line" />
                                     <ul className="list-unstyled mb-0">
-                                        <li className="text-size-16 text">
-                                            <span className="d-inline-block">Email:</span>{" "}
-                                            <a
-                                                href="mailto:info@traveltrek.com"
-                                                className="mb-0 text text-decoration-nonetext-size-16"
-                                            >
-                                                info@furrytravel.com
-                                            </a>
-                                        </li>
-                                        <li className="text-size-16 text">
-                                            <span className="d-inline-block">Phone:</span>{" "}
-                                            <a
-                                                href="tel:+12345678900"
-                                                className="mb-0 text text-decoration-nonetext-size-16"
-                                            >
-                                                +1 234 567 89 0 0
-                                            </a>
-                                        </li>
-                                        <li className="text-size-16 text1">
-                                            <span className="d-inline-block">Fax:</span>{" "}
-                                            <a
-                                                href="tel:+1(987)65432199"
-                                                className="mb-0 text text-decoration-nonetext-size-16"
-                                            >
-                                                +1 ( 987 ) 654 321 9 9
-                                            </a>
-                                        </li>
+                                        <li className="text-size-16 text">Email: <a href="mailto:info@exploreeasy.com">info@exploreeasy.com</a></li>
+                                        <li className="text-size-16 text">Phone: <a href="tel:+12345678900">+1 234 567 8900</a></li>
+                                        <li className="text-size-16 text">Fax: <a href="tel:+198765432199">+1 987 654 32199</a></li>
                                         <li className="social-icons">
                                             <div className="circle">
-                                                <a href="https://www.facebook.com/login/">
-                                                    <i className="fa-brands fa-square-facebook" />
+                                                <a href="https://www.facebook.com">
+                                                    <i className="fa-brands fa-facebook" />
                                                 </a>
                                             </div>
                                             <div className="circle">
-                                                <a href="https://twitter.com/i/flow/login">
-                                                    <i className="fa-brands fa-square-x-twitter" />
+                                                <a href="https://twitter.com">
+                                                    <i className="fa-brands fa-twitter" />
                                                 </a>
                                             </div>
                                             <div className="circle">
-                                                <a href="https://www.linkedin.com/login">
+                                                <a href="https://www.linkedin.com">
                                                     <i className="fa-brands fa-linkedin" />
                                                 </a>
                                             </div>
                                             <div className="circle">
-                                                <a href="https://www.pinterest.com/">
-                                                    <i className="fa-brands fa-square-pinterest" />
+                                                <a href="https://www.pinterest.com">
+                                                    <i className="fa-brands fa-pinterest" />
                                                 </a>
                                             </div>
                                         </li>
@@ -247,21 +173,18 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
+
                     <div className="copyright-con">
                         <div className="row">
                             <div className="col-12">
                                 <p className="text-size-16">
-                                    ©2024 FurryTravel.com All Rights Reserved
+                                ©2024 ExploreEasy. All Rights Reserved.
                                 </p>
                             </div>
                         </div>
-                        {/* copyright con */}
                     </div>
-                    {/* container */}
                 </div>
-                {/* footer con */}
             </section>
-
         </div>
     );
 };
