@@ -6,6 +6,7 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import MyProfile from "./MyProfile";
  
 
 
@@ -34,6 +35,12 @@ const router = createBrowserRouter([
             {
                 path: "/register",
                 element: <Register></Register>
+            },
+            {
+                path: "/my-profile",
+                element:
+                    <MyProfile></MyProfile>
+            
             },
         
             
