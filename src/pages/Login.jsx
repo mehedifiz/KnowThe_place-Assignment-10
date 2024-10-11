@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { AuthContext } from "../firebase/Authprovider";
+import { AuthContext } from "../firebase/AuthProvider";
 
 const Login = () => {
     const { loginUser, googleLogin, githubLogin, facebookLogin } = useContext(AuthContext);

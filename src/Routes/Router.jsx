@@ -6,9 +6,11 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-import PrivateRoute from "./PrivateRoute";
 import MyProfile from "./MyProfile";
-import EditProfile from "../pages/EditProfile";
+import UpdateProfile from "../pages/UpdateProfile";
+import AllTouristsSpot from "../pages/AllTouristsSpot";
+import PrivateRoute from "./Privateroute";
+import AddTouristsSpot from "../pages/AddTouristsSpot";
  
 
 
@@ -40,16 +42,26 @@ const router = createBrowserRouter([
             },
             {
                 path: "/my-profile",
-                element: <PrivateRoute>
-                    <MyProfile></MyProfile>
-                </PrivateRoute>
+                element:  <PrivateRoute> <MyProfile></MyProfile> </PrivateRoute>
+                
             },
             {
-                path: "/edit-profile",
-                element: <PrivateRoute>
-                    <EditProfile></EditProfile>
-                </PrivateRoute>
+                path: "/update-profile",
+                element:  <PrivateRoute><UpdateProfile></UpdateProfile> </PrivateRoute>
+            
             },
+            {
+                path: "/all-tourists-spot",
+                element: <AllTouristsSpot></AllTouristsSpot>,
+                loader: () => fetch('http://localhost:5010/tourist-spot')
+            },
+            {
+                path: "/add-tourists-spot",
+                element: <PrivateRoute>
+                    <AddTouristsSpot></AddTouristsSpot>
+                </PrivateRoute>
+            },    
+
         
             
         ]

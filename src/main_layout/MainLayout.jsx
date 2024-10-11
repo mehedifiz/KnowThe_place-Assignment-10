@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import FirebaseProvider from "../firebase/FirebaseProvider";
+import FirebaseProvider from "../firebase/AuthProvider";
 
 const MainLayout = () => {
     return (

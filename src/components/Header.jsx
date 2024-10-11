@@ -41,7 +41,7 @@ const Header = () => {
                                         <img src={userCurrent?.photoURL || "https://i.ibb.co/hHDqnJ4/male-placeholder-image.jpg"} alt="User Avatar" />
                                     </div>
                                 </button>
-                                <ul className="mt-3 z-[1] p-3 shadow-lg menu menu-sm dropdown-content bg-white rounded-lg w-56">
+                                <ul className="mt-3 z-10 p-3 shadow-lg menu menu-sm dropdown-content bg-white rounded-lg w-56">
                                     <li><Link to="/my-profile" className="text-gray-700 hover:bg-gray-100">View Profile</Link></li>
                                     <li><Link to="/update-profile" className="text-gray-700 hover:bg-gray-100">Edit Account</Link></li>
                                     <li><button onClick={logOutUser} className="text-red-600 hover:bg-gray-100">Log Out</button></li>

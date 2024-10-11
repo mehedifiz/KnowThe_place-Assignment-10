@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet";
-import { AuthContext } from "../firebase/Authprovider";
+import { AuthContext } from "../firebase/AuthProvider";
 
 const Register = () => {
     const [registerError, setRegisterError] = useState('');

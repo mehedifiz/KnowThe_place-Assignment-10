@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import { AuthContext } from "../firebase/Authprovider"; // Updated import
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
