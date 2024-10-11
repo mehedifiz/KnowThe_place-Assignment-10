@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet";
 import MyPostCard from "../components/MypostCard";
+import Swal from "sweetalert2";
 
 const MyLists = () => {
     const { userCurrent } = useContext(AuthContext);
@@ -21,10 +22,40 @@ const MyLists = () => {
             });
     }, [userCurrent, Loading]);
 
-    // Delete item
+    // Delete 
+
     const handleDeleteItem = (id) => {
         
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5010/deleteItem/${id}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data?.deletedCount > 0) {
+                            setLoading(!Loading);
+                            toast.success("Item Deleted");
+                        } else {
+                            toast.error("No items were updated");
+                        }
+                        console.log(data);
+                    });
+            } else {
+                
+                toast.info("Deletion cancelled");
+            }
+        });
     };
+    
 
     return (
         <div>
@@ -41,7 +72,7 @@ const MyLists = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-10">
                         {
                             item?.map(itemSpot => (
-                               <MyPostCard key={itemSpot._id} itemSpot={itemSpot}></MyPostCard>
+                               <MyPostCard key={itemSpot._id} itemSpot={itemSpot} handleDeleteItem={handleDeleteItem}></MyPostCard>
                             ))
                         }
                     </div>
