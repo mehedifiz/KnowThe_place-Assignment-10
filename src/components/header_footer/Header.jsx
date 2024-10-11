@@ -10,7 +10,7 @@ const Header = () => {
             <li><NavLink to="/" className="hover:text-gray-100">Home</NavLink></li>
             <li><NavLink to="/all-tourists-spot" className="hover:text-gray-100">Explore Spots</NavLink></li>
             <li><NavLink to="/add-tourists-spot" className="hover:text-gray-100">Share a Spot</NavLink></li>
-            <li><NavLink to="/my-list" className="hover:text-gray-100">My Bookmarks</NavLink></li>
+            <li><NavLink to="/my-list" className="hover:text-gray-100">My Post</NavLink></li>
         </>
     );
 

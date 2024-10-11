@@ -11,6 +11,7 @@ import UpdateProfile from "../pages/UpdateProfile";
 import AllTouristsSpot from "../pages/AllTouristsSpot";
 import PrivateRoute from "./Privateroute";
 import AddTouristsSpot from "../pages/AddTouristsSpot";
+import MyLists from "../pages/MyLists";
  
 
 
@@ -60,7 +61,14 @@ const router = createBrowserRouter([
                 element: <PrivateRoute>
                     <AddTouristsSpot></AddTouristsSpot>
                 </PrivateRoute>
-            },    
+            },
+            {
+                path: "/my-list",
+                element: <PrivateRoute>
+                    <MyLists></MyLists>
+                </PrivateRoute>
+            },
+            
 
         
             
