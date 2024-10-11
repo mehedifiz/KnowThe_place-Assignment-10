@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../firebase/FirebaseProvider";
 import { Navigate, useLocation } from "react-router-dom";
+import Loading from "../components/Loading";
 
 const PrivateRoute = ({children}) => {
 
@@ -10,11 +11,7 @@ const PrivateRoute = ({children}) => {
     // console.log(location.pathname);
 
     if(loader) {
-        return <div className="container">
-            <div className="text-center flex justify-center items-center pt-20 pb-20">
-                <span className="loading loading-dots loading-lg "></span>
-            </div>
-        </div>
+        return <Loading></Loading>
     }
 
     if (userCurrent) {
