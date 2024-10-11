@@ -8,6 +8,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import MyProfile from "./MyProfile";
+import EditProfile from "../pages/EditProfile";
  
 
 
@@ -41,6 +42,12 @@ const router = createBrowserRouter([
                 path: "/my-profile",
                 element: <PrivateRoute>
                     <MyProfile></MyProfile>
+                </PrivateRoute>
+            },
+            {
+                path: "/edit-profile",
+                element: <PrivateRoute>
+                    <EditProfile></EditProfile>
                 </PrivateRoute>
             },
         
