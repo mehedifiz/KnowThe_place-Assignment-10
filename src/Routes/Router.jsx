@@ -14,78 +14,88 @@ import AddTouristsSpot from "../pages/AddTouristsSpot";
 import MyLists from "../pages/MyLists";
 import SpotDetails from "../pages/SpotDetails";
 import UpdateDeatils from "../pages/UpdateDeatils";
- 
-
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <MainLayout></MainLayout>,
-        errorElement: <Error></Error>,
-        children: [
-            {
-                path: '/',
-                element: <Home></Home>,
-                loader: () => fetch('http://localhost:5010/tourist-spot')
-            },
-            {
-                path: "/about-us",
-                element: <About></About>
-            },
-            {
-                path: "/contact-us",
-                element: <Contact></Contact>
-            }, {
-                path: "/login",
-                element: <Login></Login>
-            },
-            {
-                path: "/register",
-                element: <Register></Register>
-            },
-            {
-                path: "/my-profile",
-                element:  <PrivateRoute> <MyProfile></MyProfile> </PrivateRoute>
-                
-            },
-            {
-                path: "/update-profile",
-                element:  <PrivateRoute><UpdateProfile></UpdateProfile> </PrivateRoute>
-            
-            },
-            {
-                path: "/all-tourists-spot",
-                element: <AllTouristsSpot></AllTouristsSpot>,
-                loader: () => fetch('http://localhost:5010/tourist-spot')
-            },
-            {
-                path: "/add-tourists-spot",
-                element: <PrivateRoute>
-                    <AddTouristsSpot></AddTouristsSpot>
-                </PrivateRoute>
-            },
-            {
-                path: "/my-list",
-                element: <PrivateRoute>
-                    <MyLists></MyLists>
-                </PrivateRoute>
-            },
-            {
-                path: "/update/:id",
-                loader: ({params})=> fetch(`http://localhost:5010/singleSpot/${params.id}`),
-                element: <UpdateDeatils></UpdateDeatils>
-            },
-            {
-                path: "/details/:id",
-                element: <PrivateRoute>
-                    <SpotDetails></SpotDetails>
-                </PrivateRoute>
-            },
-
-        
-            
-        ]
-    }
-])
+  {
+    path: "/",
+    element: <MainLayout></MainLayout>,
+    errorElement: <Error></Error>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+        loader: () => fetch("https://knowtheplace-server.vercel.app/tourist-spot"),
+      },
+      {
+        path: "/about-us",
+        element: <About></About>,
+      },
+      {
+        path: "/contact-us",
+        element: <Contact></Contact>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/my-profile",
+        element: (
+          <PrivateRoute>
+            {" "}
+            <MyProfile></MyProfile>{" "}
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/update-profile",
+        element: (
+          <PrivateRoute>
+            <UpdateProfile></UpdateProfile>{" "}
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/all-tourists-spot",
+        element: <AllTouristsSpot></AllTouristsSpot>,
+        loader: () => fetch("https://knowtheplace-server.vercel.app/tourist-spot"),
+      },
+      {
+        path: "/add-tourists-spot",
+        element: (
+          <PrivateRoute>
+            <AddTouristsSpot></AddTouristsSpot>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/my-list",
+        element: (
+          <PrivateRoute>
+            <MyLists></MyLists>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/update/:id",
+        loader: ({ params }) =>
+          fetch(`https://knowtheplace-server.vercel.app/singleSpot/${params.id}`),
+        element: <UpdateDeatils></UpdateDeatils>,
+      },
+      {
+        path: "/details/:id",
+        element: (
+          <PrivateRoute>
+            <SpotDetails></SpotDetails>
+          </PrivateRoute>
+        ),
+      },
+    ],
+  },
+]);
 
 export default router;

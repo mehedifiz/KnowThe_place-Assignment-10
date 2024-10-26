@@ -14,7 +14,7 @@ const MyLists = () => {
 
     useEffect(() => {
         // Change this URL to your localhost API endpoint
-        fetch(`http://localhost:5010/all-tourist-spot/${userCurrent?.email}`)
+        fetch(`https://knowtheplace-server.vercel.app/all-tourist-spot/${userCurrent?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -36,7 +36,7 @@ const MyLists = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5010/deleteItem/${id}`, {
+                fetch(`https://knowtheplace-server.vercel.app/deleteItem/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

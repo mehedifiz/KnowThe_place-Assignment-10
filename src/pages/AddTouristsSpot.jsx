@@ -27,7 +27,7 @@ const AddTouristsSpot = () => {
         const allData = { imgURLs, touristSpotName, countryName, location, shortDescription, seasonName, avrCost, travelTime, totalVisitors, userEmail, userName };
 
         try {
-            const response = await fetch('http://localhost:5010/add-tourist-spot', {
+            const response = await fetch('https://knowtheplace-server.vercel.app/add-tourist-spot', {
                 method: "POST",
                 headers: {
                     "content-type": "application/json",

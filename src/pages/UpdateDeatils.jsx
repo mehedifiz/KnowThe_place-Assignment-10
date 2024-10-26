@@ -34,7 +34,7 @@ const UpdateDetails = () => {
         console.log("Data to update:");
 
         // Update the data using PUT request
-        fetch(`http://localhost:5010/updateSpot/${touristSpot._id}`, {
+        fetch(`https://knowtheplace-server.vercel.app/updateSpot/${touristSpot._id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(allData),

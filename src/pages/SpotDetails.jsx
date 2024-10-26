@@ -11,7 +11,7 @@ const SpotDetails = () => {
     useEffect(() => {
         const fetchTouristSpot = async () => {
             try {
-                const response = await fetch(`http://localhost:5010/singleSpot/${id}`);
+                const response = await fetch(`https://knowtheplace-server.vercel.app/singleSpot/${id}`);
                 const data = await response.json();
                 setTouristSpot(data);
                 console.log('Tourist Spot:', data);
