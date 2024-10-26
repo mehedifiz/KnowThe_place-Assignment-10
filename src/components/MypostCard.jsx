@@ -15,8 +15,11 @@ const MyPostCard = ({ itemSpot, handleDeleteItem, handleUpdate }) => {
                     <p className="flex items-center"><span className="font-bold">Season:</span> {itemSpot.seasonName}</p>
                 </div>
                 <div className="grid grid-cols-2 gap-4 mt-4">
-                    <button onClick={() => handleUpdate(itemSpot)} className="btn btn-primary w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md transition duration-300">Edit</button>
-                    <button onClick={() => handleDeleteItem(itemSpot._id)} className="btn btn-warning w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded-md transition duration-300">Delete</button>
+                <Link to={`/update/${itemSpot._id}`}>
+    <button className="btn btn-primary w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md transition duration-300">
+        Edit
+    </button>
+</Link>           <button onClick={() => handleDeleteItem(itemSpot._id)} className="btn btn-warning w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded-md transition duration-300">Delete</button>
                 </div>
             </div>
         </div>

@@ -3,16 +3,20 @@ import L from 'leaflet';
 import { Link } from 'react-router-dom';
 import 'leaflet/dist/leaflet.css';
 
-// Set the custom icon for the marker
 const customIcon = new L.Icon({
-    iconUrl: 'https://i.ibb.co/g6c7C7T/marker-icon.png', // Replace with your marker icon URL
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
+    iconUrl: 'https://i.ibb.co/g6c7C7T/marker-icon.png',
+    iconSize: [30, 45],
+    iconAnchor: [15, 45],
+    popupAnchor: [0, -45],
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png', 
     shadowSize: [41, 41],
+    shadowAnchor: [12, 41],
 });
 
 const TouristSpotCard = ({ itemSpot }) => {
+    
+    const defaultCoordinates = [23.8103, 90.4125];
+
     return (
         <div
             key={itemSpot._id}
@@ -36,14 +40,14 @@ const TouristSpotCard = ({ itemSpot }) => {
                     <p className="text-gray-700 flex items-center"><i className="fa-solid fa-tree mr-1"></i> {itemSpot.seasonName}</p>
                 </div>
 
-                {/* Map section */}
-                <div className="mt-4">
-                    <MapContainer center={itemSpot.coordinates} zoom={13} scrollWheelZoom={false} className="h-48 rounded-lg shadow-md">
+                
+                <div className="mt-4 h-48 rounded-lg overflow-hidden">
+                    <MapContainer center={defaultCoordinates} zoom={13} scrollWheelZoom={false} style={{ height: '100%', width: '100%' }}>
                         <TileLayer
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             attribution="&copy; OpenStreetMap contributors"
                         />
-                        <Marker position={itemSpot.coordinates} icon={customIcon}>
+                        <Marker position={defaultCoordinates} icon={customIcon}>
                             <Popup>
                                 {itemSpot.touristSpotName} - {itemSpot.location}
                             </Popup>
