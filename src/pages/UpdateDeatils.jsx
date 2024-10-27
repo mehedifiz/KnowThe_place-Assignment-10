@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const UpdateDetails = () => {
     // Use useLoaderData to retrieve the loaded data
@@ -43,9 +44,9 @@ const UpdateDetails = () => {
             .then(data => {
                 console.log("Backend response:", data);
                 if (data.modifiedCount > 0) {
-                    alert("Item updated successfully!");
+                    toast.success("Item updated successfully!");
                 } else {
-                    alert("No changes made.");
+                    toast.error("No changes made.");
                 }
             })
             .catch(error => console.error("Error updating item:", error));

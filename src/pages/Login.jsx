@@ -42,7 +42,7 @@ const Login = () => {
         <div className="mt-[100px] mb-[100px] max-w-[350px] mx-auto">
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Login | Travel Trek</title>  
+                <title>Login</title>  
             </Helmet>
             <div className="container">
                 <div>

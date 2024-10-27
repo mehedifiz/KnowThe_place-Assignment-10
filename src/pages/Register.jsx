@@ -71,7 +71,7 @@ const Register = () => {
         <div className="mt-[100px] mb-[100px] max-w-[350px] mx-auto">
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Register | Travel Trek</title> {/* Updated site name */}
+                <title>Register </title> {/* Updated site name */}
             </Helmet>
             <div className="container">
                 <div>

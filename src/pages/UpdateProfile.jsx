@@ -34,7 +34,7 @@ const UpdateProfile = () => {
       <div className="my-20">
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Edit Profile | Travel Trek</title>
+          <title>Edit Profile </title>
         </Helmet>
         <div className="container mx-auto p-5 bg-white rounded-xl shadow-lg max-w-md">
           <h2 className="text-center text-2xl font-bold mb-6">
